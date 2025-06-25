@@ -17,7 +17,6 @@ TICKER = 'RELIANCE.NS'
 START_DATE = '2018-01-01'
 END_DATE = '2022-01-01'
 WINDOW = 5
-
 # --- MAIN PIPELINE ---
 def run_pipeline():
     # Step 1: Fetch Data
