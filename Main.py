@@ -10,11 +10,12 @@ from Modules.garch_volatility import fit_garch
 from Modules.granger_test import run_granger
 from Modules.anomaly_detection import detect_anomalies
 from Modules.plots import plot_returns, plot_car
-#from Modules.summary_generator import generate_summary
+from Modules.summary_generator import generate_summary
 
 # --- CONFIG ---
-TICKER = 'RELIANCE.NS'
-START_DATE = '2018-01-01'
+tickerTemp= pd.read_csv('d:/researchWork/Research-Project/ResearchProjectstocks.csv')
+TICKER = tickerTemp['Ticker_ID'].values[0]
+START_DATE = '2008-01-01'
 END_DATE = '2022-01-01'
 WINDOW = 5
 # --- MAIN PIPELINE ---
@@ -61,10 +62,10 @@ def run_pipeline():
     plot_returns(stock_df)
     plot_car(stock_df)
 
-    # Step 9: Reporting
-    #print("Generating summary report...")
-    #summary_df = generate_summary(test_results)
-    #print(summary_df)
+    #Step 9: Reporting
+    print("Generating summary report...")
+    summary_df = generate_summary(test_results, granger_result, stock_df)
+    print(summary_df)
 
 if __name__ == "__main__":
     run_pipeline()
