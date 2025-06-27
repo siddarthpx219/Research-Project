@@ -1,4 +1,4 @@
-S.no,Cyclone Name,Year,Landfall State,Intensity,Landfall_date
+S.no,Cyclone_Name,Year,Landfall_State,Intensity,Landfall_Date
 1,Nargis,2008,Myanmar,Very Severe Cyclonic Storm,2008-05-02
 2,Phailin,2013,"Odisha,AP",Severe Cyclonic Storm,2013-10-12
 3,Hudhud,2014,AP,Severe Cyclonic Storm,2014-10-12
