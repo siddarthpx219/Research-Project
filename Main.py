@@ -25,6 +25,7 @@ def run_pipeline():
     cyclone_df = get_cyclone_data()
     stock_df = get_stock_data(TICKER, START_DATE, END_DATE)
     stock_df = stock_df[TICKER].copy()
+    
 
     # Step 2: Preprocess Data
     print("Cleaning and merging data...")
