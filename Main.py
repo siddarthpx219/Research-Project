@@ -9,11 +9,11 @@ from Modules.statistical_tests import run_tests
 from Modules.garch_volatility import fit_garch
 from Modules.granger_test import run_granger
 from Modules.anomaly_detection import detect_anomalies
-from Modules.plots import plot_returns, plot_car
+from Modules.plots import plot_car_time_series, plot_garch_volatility
 from Modules.summary_generator import generate_summary
 
 # --- CONFIG ---
-tickerTemp= pd.read_csv('d:/researchWork/Research-Project/ResearchProjectstocks.csv')
+tickerTemp= pd.read_csv('/Users/siddarth/Downloads/Research/Research-Project/ResearchProjectstocks.csv')
 TICKER = tickerTemp['Ticker_ID'].values[0]
 START_DATE = '2008-01-01'
 END_DATE = '2022-01-01'
@@ -60,9 +60,9 @@ def run_pipeline():
 
     # Step 8: Visualization
     print("Plotting results...")
-    plot_returns(stock_df)
-    plot_car(stock_df)
-
+    plot_car_time_series(stock_df) 
+    plot_garch_volatility(stock_df)
+   
     #Step 9: Reporting
     print("Generating summary report...")
     summary_df = generate_summary(test_results, granger_result, stock_df)
