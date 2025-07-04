@@ -82,13 +82,16 @@ def run_pipeline():
         print(summary_df)
         all_results.append({
             'Ticker': TICKER,
-            'Test Results': test_results
+            't-test': test_results['t-test'],
+            'mann-whitney': test_results['Mann-Whitney'],
+            'kruskal': test_results['Kruskal']
         })
         print(f"Completed analysis for {TICKER}")
     # Step 10: Final Reporting
     print("Generating final report...")
     final_summary = pd.DataFrame(all_results)
     print(final_summary)
+    print(final_summary.drop(columns=['Ticker']).mean())
 
 if __name__ == "__main__":
     run_pipeline()
