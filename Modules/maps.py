@@ -1,3 +1,4 @@
+"""
 import folium
 from folium import plugins
 from IPython.display import display
@@ -6,7 +7,7 @@ import pandas as pd
 
 
 def plot_cyclone_paths_with_impact(df, region_shapes=None):
-    """
+    """"""
     Plots cyclone paths on a map with optional regional impact overlay.
 
     Parameters:
@@ -15,7 +16,7 @@ def plot_cyclone_paths_with_impact(df, region_shapes=None):
 
     Displays:
     - folium.Map object
-    """
+    """"""
     # Initialize map
     m = folium.Map(location=[20.0, 80.0], zoom_start=4, tiles='cartodb positron')
 
@@ -62,5 +63,7 @@ data = [
     {"cyclone_name": "Mocha", "lat": 19.0, "lon": 92.8, "timestamp": "2023-05-14"},
     {"cyclone_name": "Remal", "lat": 21.9, "lon": 89.1, "timestamp": "2024-05-26"},
 ]
+
 df=pd.DataFrame(data)
 plot_cyclone_paths_with_impact(df)
+"""

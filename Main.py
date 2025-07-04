@@ -11,7 +11,7 @@ from Modules.granger_test import run_granger
 from Modules.anomaly_detection import detect_anomalies
 from Modules.plots import plot_car_time_series, plot_garch_volatility
 from Modules.summary_generator import generate_summary
-from Modules.maps import plot_cyclone_paths_with_impact
+#from Modules.maps import plot_cyclone_paths_with_impact
 
 # --- CONFIG ---
 tickerTemp= pd.read_csv('Research-Project/ResearchProjectstocks.csv')
