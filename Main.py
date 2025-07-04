@@ -16,7 +16,7 @@ from Modules.summary_generator import generate_summary
 # --- CONFIG ---
 tickerTemp= pd.read_csv('Research-Project/ResearchProjectstocks.csv')
 #print("Available Tickers DataFrame:\n", tickerTemp)
-TICKER = tickerTemp['Ticker_ID'].values.tolist()  # This is now a list of tickers
+TICKER = tickerTemp['Ticker_ID'].values[0]  # This is now a list of tickers
 #print("Available Tickers:", TICKER)
 START_DATE = '2008-01-01'
 END_DATE = '2022-01-01'
@@ -76,9 +76,6 @@ def run_pipeline():
     print("Generating summary report...")
     summary_df = generate_summary(test_results, granger_result, stock_df)
     print(summary_df)
-
-unlisted_stocks = tickerTemp[tickerTemp['Ticker_ID'] == 'Unlisted']
-print("Unlisted Stocks:\n", unlisted_stocks[['S.no', 'Stock_ID']])
 
 if __name__ == "__main__":
     run_pipeline()
