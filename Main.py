@@ -11,6 +11,7 @@ from Modules.granger_test import run_granger
 from Modules.anomaly_detection import detect_anomalies
 from Modules.plots import plot_car_time_series, plot_garch_volatility
 from Modules.summary_generator import generate_summary
+from Modules.maps import plot_cyclone_paths_with_impact
 
 # --- CONFIG ---
 tickerTemp= pd.read_csv('/Users/siddarth/Downloads/Research/Research-Project/ResearchProjectstocks.csv')
@@ -43,7 +44,8 @@ def run_pipeline():
     pre_event = stock_df[stock_df['Event'] == 0]['Log_Return']
     post_event = stock_df[stock_df['Event'] == 1]['Log_Return']
     test_results = run_tests(pre_event, post_event)
-    print("Test Results:\n", test_results)
+    p_values_df=pd.DataFrame(test_results,index=[1,2,3])
+    print("Test Results:\n", p_values_df)
 
     # Step 5: Volatility Modeling
     print("Fitting GARCH model...")
@@ -61,8 +63,12 @@ def run_pipeline():
     # Step 8: Visualization
     print("Plotting results...")
     plot_car_time_series(stock_df) 
+    print(stock_df)
     plot_garch_volatility(stock_df)
-   
+
+    #step 8.5: Maps
+    print("Displaying maps")
+    
     #Step 9: Reporting
     print("Generating summary report...")
     summary_df = generate_summary(test_results, granger_result, stock_df)

@@ -23,7 +23,7 @@ def plot_garch_volatility(df):
     Assumes that 'GARCH_Volatility' column exists in the DataFrame.
     """
     plt.figure(figsize=(10, 6))
-    plt.plot(df.index, df['GARCH_Volatility'], label='Estimated Volatility', color='orange')
+    plt.plot(df.index, df['Volatility'], label='Estimated Volatility', color='orange')
     plt.title('Graph 2: Volatility Estimates via GARCH')
     plt.xlabel('Date')
     plt.ylabel('Volatility')
