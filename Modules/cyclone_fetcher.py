@@ -18,5 +18,5 @@ def get_cyclone_data():
     {"cyclone_name": "Remal", "lat": 21.9, "lon": 89.1, "timestamp": "2024-05-26"},
 ]
     df = pd.DataFrame(data)
-    df['Landfall_Date'] = pd.to_datetime(df['Landfall_Date'])
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
     return df

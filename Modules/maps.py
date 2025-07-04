@@ -1,6 +1,7 @@
 import folium
 from folium import plugins
 from IPython.display import display
+import folium.map
 import pandas as pd
 
 
@@ -44,7 +45,7 @@ def plot_cyclone_paths_with_impact(df, region_shapes=None):
         folium.LayerControl().add_to(m)
 
     # Display map
-    display(m)
+    m.save('cyclone_paths_with_impact.html')
 
 data = [
     {"cyclone_name": "Nargis", "lat": 16.8, "lon": 94.8, "timestamp": "2008-05-02"},

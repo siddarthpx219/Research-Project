@@ -14,7 +14,7 @@ from Modules.summary_generator import generate_summary
 from Modules.maps import plot_cyclone_paths_with_impact
 
 # --- CONFIG ---
-tickerTemp= pd.read_csv('/Users/siddarth/Downloads/Research/Research-Project/ResearchProjectstocks.csv')
+tickerTemp= pd.read_csv('Research-Project/ResearchProjectstocks.csv')
 TICKER = tickerTemp['Ticker_ID'].values[0]
 START_DATE = '2008-01-01'
 END_DATE = '2022-01-01'
@@ -67,7 +67,7 @@ def run_pipeline():
     plot_garch_volatility(stock_df)
 
     #step 8.5: Maps
-    print("Displaying maps")
+    #print("Displaying maps")
     
     #Step 9: Reporting
     print("Generating summary report...")
