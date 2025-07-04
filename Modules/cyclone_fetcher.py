@@ -1,7 +1,8 @@
 import pandas as pd
 
 def get_cyclone_data():
-    #data = pd.read_csv("/Users/siddarth/Downloads/Research/Research-Project/ResearchProjectcyclones.csv")
+    data = pd.read_csv("Research-Project/ResearchProjectcyclones.csv")
+    """""
     data = [
     {"cyclone_name": "Nargis", "lat": 16.8, "lon": 94.8, "timestamp": "2008-05-02"},
     {"cyclone_name": "Phailin", "lat": 19.2, "lon": 84.8, "timestamp": "2013-10-12"},
@@ -17,6 +18,7 @@ def get_cyclone_data():
     {"cyclone_name": "Mocha", "lat": 19.0, "lon": 92.8, "timestamp": "2023-05-14"},
     {"cyclone_name": "Remal", "lat": 21.9, "lon": 89.1, "timestamp": "2024-05-26"},
 ]
+"""
     df = pd.DataFrame(data)
     df['timestamp'] = pd.to_datetime(df['timestamp'])
     return df
