@@ -18,8 +18,8 @@ tickerTemp= pd.read_csv('Research-Project/ResearchProjectstocks.csv')
 #print("Available Tickers DataFrame:\n", tickerTemp)
 TICKER = tickerTemp['Ticker_ID'].unique()  # This is now a list of tickers
 #print("Available Tickers:", TICKER)
-START_DATE = '2008-01-01'
-END_DATE = '2022-01-01'
+START_DATE = '2010-01-01'
+END_DATE = '2020-01-01'
 WINDOW = 5
 # --- MAIN PIPELINE ---
 all_results = []  # To store results for each ticker
@@ -79,12 +79,13 @@ def run_pipeline():
         #Step 9: Reporting
         print("Generating summary report...")
         summary_df = generate_summary(test_results, granger_result, stock_df)
-        print(summary_df)
+        #print(summary_df)
         all_results.append({
             'Ticker': TICKER,
             't-test': test_results['t-test'],
             'mann-whitney': test_results['Mann-Whitney'],
-            'kruskal': test_results['Kruskal']
+            'kruskal': test_results['Kruskal'],
+            'CAR': stock_df['CAR'].mean()
         })
         print(f"Completed analysis for {TICKER}")
     # Step 10: Final Reporting
@@ -92,6 +93,9 @@ def run_pipeline():
     final_summary = pd.DataFrame(all_results)
     print(final_summary)
     print(final_summary.drop(columns=['Ticker']).mean())
+    print("Plotting results...")
+    plot_car_time_series(final_summary) 
+    #print(stock_df)
 
 if __name__ == "__main__":
     run_pipeline()
