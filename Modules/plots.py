@@ -37,3 +37,36 @@ def plot_garch_volatility(df, TICKER,sector):
     #plt.show()
     plt.savefig('Graph2_GARCH_' + TICKER + '- ' + sector + '.png', dpi=300)  # Save the plot as a PNG file
     plt.close()  # Close the plot to free memory
+
+def plot_net_car_garch(df):
+    """
+    Plot Graph 3: Net CAR and GARCH Volatility
+    Assumes that 'Net_CAR' and 'GARCH_Volatility' columns exist in the DataFrame.
+    """
+    plt.figure(figsize=(10, 6))
+    plt.plot(df['Ticker'], df['CAR'], label='Net CAR', color='blue')
+    #plt.plot(df['Ticker'], df['Volatility'], label='GARCH Volatility', color='orange')
+    plt.xticks(rotation=90)
+    plt.title('Graph 3: Net CAR and GARCH Volatility')
+    plt.xlabel('Ticker')
+    plt.ylabel('Cumulative Abnormal Returns')
+    plt.grid(True)
+    plt.legend()
+    plt.tight_layout()
+    #plt.show()
+    plt.savefig('Graph3_Net_CAR_GARCH.png', dpi=300)  # Save the plot as a PNG file
+    plt.close()  # Close the plot to free memory
+    
+    
+    plt.figure(figsize=(10, 6))
+    plt.plot(df['Ticker'], df['Volatility'], label='GARCH Volatility', color='orange')
+    plt.xticks(rotation=90)
+    plt.title('Graph 4: GARCH Volatility')
+    plt.xlabel('Ticker')
+    plt.ylabel('Volatility')
+    plt.grid(True)
+    plt.legend()
+    plt.tight_layout()
+    #plt.show()
+    plt.savefig('Graph4_GARCH_Volatility.png', dpi=300)  # Save the plot as a PNG file
+    plt.close()  # Close the plot to free memory

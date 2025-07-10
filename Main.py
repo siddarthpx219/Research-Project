@@ -9,7 +9,7 @@ from Modules.statistical_tests import run_tests
 from Modules.garch_volatility import fit_garch
 from Modules.granger_test import run_granger
 from Modules.anomaly_detection import detect_anomalies
-from Modules.plots import plot_car_time_series, plot_garch_volatility
+from Modules.plots import plot_car_time_series, plot_garch_volatility, plot_net_car_garch
 from Modules.summary_generator import generate_summary
 #from Modules.maps import plot_cyclone_paths_with_impact
 
@@ -21,8 +21,8 @@ print(dic)
 TICKER = tickerTemp['Ticker_ID'].unique()  # This is now a list of tickers
 ##print("Available Tickers:", TICKER)
 sector_wise_results = {}  # To store sector-wise results
-START_DATE = '2010-01-01'
-END_DATE = '2024-01-01'
+START_DATE = '2013-01-01'
+END_DATE = '2023-01-01'
 WINDOW = 5
 # --- MAIN PIPELINE ---
 all_results = []  # To store results for each ticker
@@ -91,8 +91,8 @@ def run_pipeline():
             'mann-whitney': test_results['Mann-Whitney'],
             'kruskal': test_results['Kruskal'],
             'CAR': stock_df['CAR'].mean(),
-            'Volatility': stock_df['Volatility'].mean(),
-            'Granger_Causality': granger_result
+            'Volatility': stock_df['Volatility'].mean()
+            #'Granger_Causality': granger_result
         })
             #print(f"Completed analysis for {TICKER}")
         
@@ -101,11 +101,12 @@ def run_pipeline():
     final_summary = pd.DataFrame(all_results)
     print(final_summary)
     print(sector_wise_results)
-    print(final_summary.drop(columns=['Ticker','Sector','Granger_Causality']).mean())
+    print(final_summary.drop(columns=['Ticker','Sector']).mean())
     #print("Plotting results...")
     sector_wise_stats = final_summary.groupby('Sector').mean(numeric_only=True)
     print("Sector-wise Mean Statistics:\n", sector_wise_stats)
     #plot_car_time_series(final_summary) 
+    plot_net_car_garch(final_summary)
     ##print(stock_df)
 
 if __name__ == "__main__":
