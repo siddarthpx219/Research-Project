@@ -1,21 +1,21 @@
-S.no,Stock_ID,Ticker_ID
-1,NTPC,NTPC.NS
-2,Power Grid Corporation,POWERGRID.NS
-3,Adani ports and SEZ,ADANIPORTS.NS
-4,Larsen and Toubro,LT.NS
-5,Indian Oil Corporation,IOC.NS
-6,ONGC,ONGC.NS
-7,HPCL,HINDPETRO.NS
-8,BPCL,BPCL.NS
-9,Shipping Corporation of India,SCI.NS
-10,Container Corporation of India,CONCOR.NS
-11,ITC,ITC.NS
-12,Tata consumer Products,TATACONSUM.NS
-13,Dabur,DABUR.NS
-14,Godrej Consumer,GODREJCP.NS
-15,ICICI Lombard,ICICIGI.NS
-16,HDFC Life,HDFCLIFE.NS
-17,SBI Life,SBILIFE.NS
-18,Bajaj Finance,BAJFINANCE.NS
-19,NALCO,NATIONALUM.NS
-22,Visa Steels,VISASTEEL.NS
+S.no,Stock_ID,Ticker_ID,sector
+1,NTPC,NTPC.NS,Infrastructure & Power
+2,Power Grid Corporation,POWERGRID.NS,Infrastructure & Power
+3,Adani ports and SEZ,ADANIPORTS.NS,Infrastructure & Power
+4,Larsen and Toubro,LT.NS,Infrastructure & Power
+5,Indian Oil Corporation,IOC.NS,"Oil, Gas & Petrochemicals"
+6,ONGC,ONGC.NS,"Oil, Gas & Petrochemicals"
+7,HPCL,HINDPETRO.NS,"Oil, Gas & Petrochemicals"
+8,BPCL,BPCL.NS,"Oil, Gas & Petrochemicals"
+9,Shipping Corporation of India,SCI.NS,Shipping & Logistics
+10,Container Corporation of India,CONCOR.NS,Shipping & Logistics
+11,ITC,ITC.NS,FMCG & Agri-linked
+12,Tata consumer Products,TATACONSUM.NS,FMCG & Agri-linked
+13,Dabur,DABUR.NS,FMCG & Agri-linked
+14,Godrej Consumer,GODREJCP.NS,FMCG & Agri-linked
+15,ICICI Lombard,ICICIGI.NS,Insurance & Finance
+16,HDFC Life,HDFCLIFE.NS,Insurance & Finance
+17,SBI Life,SBILIFE.NS,Insurance & Finance
+18,Bajaj Finance,BAJFINANCE.NS,Insurance & Finance
+19,NALCO,NATIONALUM.NS,State-Specific PSUs
+22,Visa Steels,VISASTEEL.NS,Unclassified

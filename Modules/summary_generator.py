@@ -28,6 +28,6 @@ def generate_summary(test_results, granger_result, stock_df):
     if 'Anomaly' in stock_df.columns:
         summary['Number of Anomalies'] = stock_df['Anomaly'].sum()
 
-    # Convert to DataFrame for pretty printing
+    # Convert to DataFrame for pretty #printing
     summary_df = pd.DataFrame([summary])
     return summary_df

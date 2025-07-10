@@ -1,14 +1,11 @@
 S.no,Cyclone_Name,Year,Landfall_State,Intensity,timestamp,lat,lon
-1,Nargis,2008,Myanmar,Very Severe Cyclonic Storm,2008-05-02,16.8,94.8
 2,Phailin,2013,"Odisha,AP",Severe Cyclonic Storm,2013-10-12,19.2,84.8
 3,Hudhud,2014,AP,Severe Cyclonic Storm,2014-10-12,17.7,83.3
 4,Roanu,2016,"AP,TN",Cyclonic Storm,2016-05-21,15.3,80.1
 5,Vardah,2016,TN,Cyclonic Storm,2016-12-12,13.1,80.3
 6,Fani,2019,Odisha,Very Severe Cyclonic Storm,2019-05-03,19.8,85.7
 7,Bulbul,2019,West Bengal,Severe Cyclonic Storm,2019-11-05,21.6,88.3
-8,Amphan,2020,West Bengal,Super Cyclonic Storm,2020-05-20,21.4,87.8
 9,Nivar,2020,TN,Severe Cyclonic Storm,2020-11-23,12.0,79.8
 10,Yaas ,2021,"Odisha,Jharkhand",Severe Cyclonic Storm,2021-05-26,21.9,87.1
 11,Asani,2022,AP,Cyclonic Storm,2022-05-11,15.5,81.3
 12,Mocha,2023,Myanmar,Very Severe Cyclonic Storm,2023-05-14,19.0,92.8
-13,Remal,2024,"Odisha,Bengal",Cyclonic Storm,2024-05-26,21.9,89.1
