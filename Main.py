@@ -15,13 +15,13 @@ from Modules.summary_generator import generate_summary
 
 # --- CONFIG ---
 tickerTemp= pd.read_csv('Research-Project/ResearchProjectstocks.csv')
-##print("Available Tickers DataFrame:\n", tickerTemp)
+
 dic= tickerTemp.groupby('sector')['Ticker_ID'].apply(list).to_dict()
 print(dic)
 TICKER = tickerTemp['Ticker_ID'].unique()  # This is now a list of tickers
 ##print("Available Tickers:", TICKER)
 sector_wise_results = {}  # To store sector-wise results
-START_DATE = '2013-01-01'
+START_DATE = '2010-01-01'
 END_DATE = '2025-01-01'
 WINDOW = 5
 # --- MAIN PIPELINE ---
@@ -72,10 +72,10 @@ def run_pipeline():
             stock_df = detect_anomalies(stock_df)
             
             # Step 8: Visualization
-            #print("Plotting results...")
-            #plot_car_time_series(stock_df, TICKER, sector) 
+            print("Plotting results...")
+            plot_car_time_series(stock_df, TICKER, sector) 
             ##print(stock_df)
-            #plot_garch_volatility(stock_df, TICKER, sector)
+            plot_garch_volatility(stock_df, TICKER, sector)
             #step 8.5: Maps
             ##print("Displaying maps")
             

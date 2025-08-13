@@ -22,13 +22,13 @@ def plot_cyclone_paths_with_impact(df, region_shapes=None):
 
     # Group by cyclone name to draw paths
     for name, group in df.groupby('name'):
-        coordinates = group.sort_values('date')[['lat', 'long']].values.tolist()
+        coordinates = group.sort_values('timestamp')[['lat', 'long']].values.tolist()
         folium.PolyLine(locations=coordinates, tooltip=name, color='blue').add_to(m)
         # Add starting point marker
         start_point = coordinates[0]
         folium.Marker(
             location=start_point,
-            tooltip=f"{name} (Start)",
+            tooltip=f"{name}",
             icon=folium.Icon(color='green', icon='info-sign')
         ).add_to(m)
 

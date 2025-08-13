@@ -1,8 +1,7 @@
-name,date,intensity,lat,long,basin of origin,Check
+name,timestamp,intensity,lat,long,basin of origin,Check
 Laila,2010-05-20,SCS,16,80.5,BOB,ok
 Giri,2010-10-22,ESCS,17.5,91.5,BOB,ok
 Jal,2010-11-07,SCS,13.3,80.2,BOB,ok
-Keila,2011-11-02,CS,17.1,54.3,ARB,ok
 Thane,2011-12-30,VSCS,11.6,79.9,BOB,ok
 Nilam,2012-10-31,CS,12.5,80.2,BOB,ok
 Viyaru,2013-05-16,CS,22.8,91.4,BOB,ok
