@@ -1,0 +1,8 @@
+Sector,t-test,mann-whitney,kruskal,CAR,Volatility
+FMCG & Agri-linked,0.41752,0.31984,0.31980,-0.00609,0.01773
+Infrastructure & Power,0.58483,0.52321,0.52316,-0.08402,0.01823
+Insurance & Finance,0.37956,0.34664,0.34655,0.16510,0.01971
+"Oil, Gas & Petrochemicals",0.37964,0.31373,0.31370,0.23894,0.02184
+Shipping & Logistics,0.35733,0.25517,0.25514,-0.06712,0.02440
+State-Specific PSUs,0.75743,0.72085,0.72078,-0.18588,0.02656
+Unclassified,0.75949,0.98929,0.98923,-0.71247,0.03486

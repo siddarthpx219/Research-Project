@@ -22,7 +22,7 @@ TICKER = tickerTemp['Ticker_ID'].unique()  # This is now a list of tickers
 ##print("Available Tickers:", TICKER)
 sector_wise_results = {}  # To store sector-wise results
 START_DATE = '2013-01-01'
-END_DATE = '2023-01-01'
+END_DATE = '2025-01-01'
 WINDOW = 5
 # --- MAIN PIPELINE ---
 all_results = []  # To store results for each ticker
@@ -73,9 +73,9 @@ def run_pipeline():
             
             # Step 8: Visualization
             #print("Plotting results...")
-            plot_car_time_series(stock_df, TICKER, sector) 
+            #plot_car_time_series(stock_df, TICKER, sector) 
             ##print(stock_df)
-            plot_garch_volatility(stock_df, TICKER, sector)
+            #plot_garch_volatility(stock_df, TICKER, sector)
             #step 8.5: Maps
             ##print("Displaying maps")
             
@@ -101,9 +101,12 @@ def run_pipeline():
     final_summary = pd.DataFrame(all_results)
     print(final_summary)
     print(sector_wise_results)
+    #final_summary.to_csv('Research-Project/Results/final_summary.csv', index=False)
+    #sector_wise_stats=pd.DataFrame(sector_wise_stats)
     print(final_summary.drop(columns=['Ticker','Sector']).mean())
     #print("Plotting results...")
     sector_wise_stats = final_summary.groupby('Sector').mean(numeric_only=True)
+    #sector_wise_stats.to_csv('Research-Project/Results/sector_wise_stats.csv', index=True)
     print("Sector-wise Mean Statistics:\n", sector_wise_stats)
     #plot_car_time_series(final_summary) 
     plot_net_car_garch(final_summary)

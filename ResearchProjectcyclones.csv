@@ -10,3 +10,4 @@ S.no,Cyclone_Name,Year,Landfall_State,Intensity,timestamp,lat,lon
 10,Yaas ,2021,"Odisha,Jharkhand",Severe Cyclonic Storm,2021-05-26,21.9,87.1
 11,Asani,2022,AP,Cyclonic Storm,2022-05-11,15.5,81.3
 12,Mocha,2023,Myanmar,Very Severe Cyclonic Storm,2023-05-14,19.0,92.8
+13,Remal,2024,West Bengal,Severe Cyclonic Storm,2024-05-26,21.7,89.2
